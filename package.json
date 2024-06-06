@@ -1,6 +1,6 @@
 {
   "name": "github-hook-user",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build":"tsc"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["react","github","fetch api","Repos"],
+  "author": "Muhammad Abdullah ",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.14.2",
