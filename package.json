@@ -1,6 +1,6 @@
 {
   "name": "github-hook-user",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This is the hook for fetching repos data of a particular user",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
