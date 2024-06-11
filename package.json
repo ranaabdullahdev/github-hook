@@ -1,14 +1,21 @@
 {
   "name": "github-hook-user",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "This is the hook for fetching repos data of a particular user",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"tsc"
+    "build": "tsc"
   },
-  "keywords": ["react","github","fetch api","Repos"],
+  "keywords": [
+    "react",
+    "github",
+    "fetch api",
+    "Repos",
+    "package",
+    "module"
+  ],
   "author": "Muhammad Abdullah ",
   "license": "ISC",
   "devDependencies": {
