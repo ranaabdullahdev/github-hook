@@ -1,6 +1,6 @@
 {
   "name": "github-hook-user",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This is the hook for fetching repos data of a particular user",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,6 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
+  "files": [
+    "dist",
+    "CHANGELOGS.md",
+    "README.md"
+  ],
   "keywords": [
     "react",
     "github",
