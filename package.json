@@ -1,6 +1,6 @@
 {
   "name": "github-hook-user",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This is the hook for fetching repos data of a particular user",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,6 +13,11 @@
     "CHANGELOGS.md",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranaabdullahdev/github-hook"
+  },
+  "homepage": "https://github.com/ranaabdullahdev/github-hook#readme",
   "keywords": [
     "react",
     "github",

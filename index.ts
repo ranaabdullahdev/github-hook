@@ -163,6 +163,31 @@ export const useGithubHook = (token: string) => {
     }
   };
 
+  const fetchRepoCommits = async (username: string, repo: string): Promise<Repo> => {
+    if (!username) throw new Error("User name is required");
+    if (!repo) throw new Error("Repo name is required");
+    try {
+      const response = await fetch(
+        `https://api.github.com/repos/${username}/${repo}/commits`,
+        {
+          headers: {
+            Authorization: `token ${token}`,
+            Accept: "application/vnd.github.v3+json",
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const data: Repo = await response.json();
+      return data;
+    } catch (error: any) {
+      throw new Error(error.message || error.toString());
+    }
+  };
+
   const fetchRepoIssue = async (
     username: string,
     repo: string
@@ -191,5 +216,5 @@ export const useGithubHook = (token: string) => {
     }
   };
 
-  return { fetchRepos, fetchRepo, fetchRepoIssue };
+  return { fetchRepos, fetchRepo, fetchRepoIssue,fetchRepoCommits };
 };
