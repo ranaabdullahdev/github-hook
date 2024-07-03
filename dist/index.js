@@ -54,6 +54,28 @@ const useGithubHook = (token) => {
             throw new Error(error.message || error.toString());
         }
     });
+    const fetchRepoCommits = (username, repo) => __awaiter(void 0, void 0, void 0, function* () {
+        if (!username)
+            throw new Error("User name is required");
+        if (!repo)
+            throw new Error("Repo name is required");
+        try {
+            const response = yield fetch(`https://api.github.com/repos/${username}/${repo}/commits`, {
+                headers: {
+                    Authorization: `token ${token}`,
+                    Accept: "application/vnd.github.v3+json",
+                },
+            });
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            const data = yield response.json();
+            return data;
+        }
+        catch (error) {
+            throw new Error(error.message || error.toString());
+        }
+    });
     const fetchRepoIssue = (username, repo) => __awaiter(void 0, void 0, void 0, function* () {
         if (!username)
             throw new Error("User name is required");
@@ -76,6 +98,6 @@ const useGithubHook = (token) => {
             throw new Error(error.message || error.toString());
         }
     });
-    return { fetchRepos, fetchRepo, fetchRepoIssue };
+    return { fetchRepos, fetchRepo, fetchRepoIssue, fetchRepoCommits };
 };
 exports.useGithubHook = useGithubHook;
